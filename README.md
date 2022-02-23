@@ -1,1 +1,1 @@
-# mysite follow instructions from the tutorials
+# poll app created by following instructions from the tutorials
