@@ -12,7 +12,7 @@ https://docs.djangoproject.com/en/4.0/ref/settings/
 
 from pathlib import Path
 from re import TEMPLATE
-import django_heroku
+import django_on_heroku
 
 
 
