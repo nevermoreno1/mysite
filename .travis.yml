@@ -1,4 +1,14 @@
-language: ruby
-rvm:
- - 2.2
- - jruby
+language: python
+install:
+  - pip install -r requirements.txt
+  - pip install black
+  - pip install flake8
+before_script:
+  - python3 manage.py migrate
+script:
+  - python3 manage.py
+  - black . --check
+  - flake8 --max-line-length=92
+  - coverage run --source='.' manage.py test
+after_success:
+  - coveralls
